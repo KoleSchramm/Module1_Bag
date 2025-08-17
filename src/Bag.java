@@ -3,12 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Bag<T> implements Iterable<T>{
-    private List<T> elements;
-
-    //Constructor
-    public Bag(){
-        elements = new LinkedList<>();
-    }
+    private List<T> elements = new LinkedList<>();
 
     //Adds specified item to list
     public void add(T item){
