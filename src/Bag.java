@@ -31,6 +31,29 @@ public class Bag<T> implements Iterable<T>{
         return i;
     }
 
+    //Returns the current number of elements in the bag
+    public int size(){
+        return elements.size();
+    }
+
+    //Merges the specified bag with the current bag
+    public void merge(Bag<T> bag){
+        for(T element : bag.elements){
+            add(element);
+        }
+    }
+
+    //Returns a bag containing the elements of the original bag without duplicates
+    public Bag<T> distinct(){
+        Bag<T> bag = new Bag<T>();
+        for(T element : elements){
+            if(!bag.contains(element)){
+                bag.add(element);
+            }
+        }
+        return bag;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return this.elements.iterator();
