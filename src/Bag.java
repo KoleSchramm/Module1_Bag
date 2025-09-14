@@ -54,6 +54,10 @@ public class Bag<T> implements Iterable<T>{
         return bag;
     }
 
+    public void Clear(){
+        elements.clear();
+    }
+
     @Override
     public Iterator<T> iterator() {
         return this.elements.iterator();

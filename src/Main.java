@@ -25,6 +25,10 @@ public class Main {
         Bag<String> distinctBag = bag.distinct();
         System.out.println("Distinct bag contents:");
         printBag(distinctBag);
+
+        distinctBag.Clear();
+        System.out.println("Cleared bag contents");
+        printBag(distinctBag);
     }
 
     public static void printBag(Bag bag){
